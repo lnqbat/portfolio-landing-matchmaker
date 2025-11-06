@@ -1,0 +1,185 @@
+[
+  {
+    "id": 1,
+    "tournament": 1,
+    "round_no": 1,
+    "status": "FINISHED",
+    "teamA": {
+      "id": 4,
+      "name": "Team 4",
+      "victories": 1,
+      "defeats": 0,
+      "total_score": 55,
+      "participants": [
+        {
+          "id": 7,
+          "display_name": "Soren",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 8,
+          "display_name": "Leo",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    "teamB": {
+      "id": 1,
+      "name": "Team 1",
+      "victories": 0,
+      "defeats": 1,
+      "total_score": 35,
+      "participants": [
+        {
+          "id": 1,
+          "display_name": "Aiden",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 2,
+          "display_name": "Elias",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    "teamA_score": 55,
+    "teamB_score": 35,
+    "teamA_from": null,
+    "teamB_from": null,
+    "winner": {
+      "id": 4,
+      "name": "Team 4",
+      "victories": 1,
+      "defeats": 0,
+      "total_score": 55,
+      "participants": [
+        {
+          "id": 7,
+          "display_name": "Soren",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 8,
+          "display_name": "Leo",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "tournament": 1,
+    "round_no": 1,
+    "status": "FINISHED",
+    "teamA": {
+      "id": 3,
+      "name": "Team 3",
+      "victories": 1,
+      "defeats": 0,
+      "total_score": 75,
+      "participants": [
+        {
+          "id": 5,
+          "display_name": "Jade",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 6,
+          "display_name": "Milo",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    "teamB": {
+      "id": 2,
+      "name": "Team 2",
+      "victories": 0,
+      "defeats": 1,
+      "total_score": 15,
+      "participants": [
+        {
+          "id": 3,
+          "display_name": "Luca",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 4,
+          "display_name": "Iris",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    "teamA_score": 75,
+    "teamB_score": 15,
+    "teamA_from": null,
+    "teamB_from": null,
+    "winner": {
+      "id": 3,
+      "name": "Team 3",
+      "victories": 1,
+      "defeats": 0,
+      "total_score": 75,
+      "participants": [
+        {
+          "id": 5,
+          "display_name": "Jade",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 6,
+          "display_name": "Milo",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "tournament": 1,
+    "round_no": 2,
+    "status": "SCHEDULED",
+    "teamA": {
+      "id": 4,
+      "name": "Team 4",
+      "victories": 1,
+      "defeats": 0,
+      "total_score": 55,
+      "participants": [
+        {
+          "id": 7,
+          "display_name": "Soren",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 8,
+          "display_name": "Leo",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    "teamB": {
+      "id": 3,
+      "name": "Team 3",
+      "victories": 1,
+      "defeats": 0,
+      "total_score": 75,
+      "participants": [
+        {
+          "id": 5,
+          "display_name": "Jade",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 6,
+          "display_name": "Milo",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    "teamA_score": 0,
+    "teamB_score": 0,
+    "teamA_from": 1,
+    "teamB_from": 2,
+    "winner": null
+  }
+]
