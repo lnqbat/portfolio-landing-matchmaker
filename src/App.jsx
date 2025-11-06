@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 
 import Navbar from "./components/Navbar";
@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+       <HashRouter>
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow mt-10">
@@ -21,9 +21,9 @@ function App() {
           </main>
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
-  )
+  );
 }
 
 export default App;
