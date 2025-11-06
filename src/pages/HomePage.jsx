@@ -23,22 +23,24 @@ function HomePage() {
     document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // ✅ Chemins corrigés pour GitHub Pages
-  const base = import.meta.env.BASE_URL;
-
   const imagesGeneral = [
-    `${base}data/images/slide_${theme}_ranking.png`,
-    `${base}data/images/slide_${theme}_matches.png`,
-    `${base}data/images/slide_${theme}_tree.png`,
+    `/data/images/slide_${theme}_ranking.png`,
+    `/data/images/slide_${theme}_matches.png`,
+    `/data/images/slide_${theme}_tree.png`,
   ];
 
   const imagesTournament = [
-    `${base}data/images/slide_${theme}_tournament_list.png`,
-    `${base}data/images/slide_${theme}_tournament_general.png`,
-    `${base}data/images/slide_${theme}_tournament_participants.png`,
+    `/data/images/slide_${theme}_tournament_list.png`,
+    `/data/images/slide_${theme}_tournament_general.png`,
+    `/data/images/slide_${theme}_tournament_participants.png`,
   ];
 
-  const imageMobile = `${base}data/images/mobile_${theme}.png`;
+  const imageMobile = `/data/images/mobile_${theme}.png`;
+
+  const teamImages = {
+    baptiste: "/data/images/team_baptiste.jpg",
+    gwendal: "/data/images/team_gwendal.jpg",
+  };
 
   const updateScores = () => {
     const teams = [...scoreboard.teams];
@@ -95,19 +97,19 @@ function HomePage() {
     document.getElementById("modal-start").showModal();
   };
 
-  const handleSubmit = (element) => {
-    element.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if (!shareCode) return;
     window.location.href = `https://matchmaker.ovh/scoreboard/${shareCode}`;
   };
 
   useEffect(() => {
-    fetch(`${base}data/matches.json`)
+    fetch("/data/matches.json")
       .then((response) => response.json())
       .then(setMatches)
       .catch(console.error);
 
-    fetch(`${base}data/scoreboard.json`)
+    fetch("/data/scoreboard.json")
       .then((response) => response.json())
       .then(setScoreboard)
       .catch(console.error);
@@ -149,7 +151,7 @@ function HomePage() {
 
           <div className="flex justify-center mt-4 md:justify-start">
             <button
-              onClick={() => handleStart()}
+              onClick={handleStart}
               className="btn border border-base-300 flex items-center gap-2 mt-8 px-6 py-6 rounded-full cursor-pointer bg-primary text-white text-xl font-semibold hover:bg-primary/90 transition"
             >
               {t("get_started")}
@@ -158,7 +160,6 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Visualization */}
         <div className="flex-1 w-full justify-end hidden lg:block">
           <VisualizationSlider theme={theme} images={imagesGeneral} duration={3000} />
         </div>
@@ -168,9 +169,7 @@ function HomePage() {
           shareCode={shareCode}
           setShareCode={setShareCode}
           onSubmit={handleSubmit}
-          onNavigate={() => {
-            window.location.href = "https://matchmaker.ovh/tournaments";
-          }}
+          onNavigate={() => (window.location.href = "https://matchmaker.ovh/tournaments")}
         />
 
         <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
@@ -183,7 +182,10 @@ function HomePage() {
       </section>
 
       {/* FEATURES SECTION */}
-      <section id="features" className="flex flex-col items-center py-32 px-8 w-full max-w-6xl space-y-8 md:space-y-40">
+      <section
+        id="features"
+        className="flex flex-col items-center py-32 px-8 w-full max-w-6xl space-y-8 md:space-y-40"
+      >
         <div className="flex items-center justify-center my-12 w-full mb-8 md:mb-24">
           <div className="border-t border-base-content/70 flex-grow mx-4" />
           <h2 className="text-4xl font-bold text-base-content/70 text-center whitespace-nowrap">
@@ -221,7 +223,7 @@ function HomePage() {
           description={t("feature_description_scores")}
           icon="scores"
           component={<ScoreboardRanking scoreboard={scoreboard} highlightedTeams={highlightedTeams} />}
-          button={{ text: t("update_scores"), action: () => updateScores() }}
+          button={{ text: t("update_scores"), action: updateScores }}
           direction="left"
         />
       </section>
@@ -264,14 +266,14 @@ function HomePage() {
               name: "Baptiste Lonqueu",
               github: "https://github.com/lnqbat",
               linkedin: "https://linkedin.com/in/baptiste-lonqueu-9a9b79202",
-              image: `${base}data/images/team_baptiste.jpg`,
+              image: teamImages.baptiste,
               role: "Backend & Deployment",
             },
             {
               name: "Gwendal Minguy-Pèlerin",
               github: "https://github.com/gwendalminguy",
               linkedin: "https://linkedin.com/in/gwendalminguy",
-              image: `${base}data/images/team_gwendal.jpg`,
+              image: teamImages.gwendal,
               role: "Frontend & UX Design",
             },
           ].map((member, index) => (
