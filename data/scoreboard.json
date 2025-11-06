@@ -1,0 +1,92 @@
+{
+  "id": 1,
+  "organizer_id": "8010d872-086b-4d9f-89f8-600c592e2ad6",
+  "name": "October Monthly Contest",
+  "sport_type": "Belote",
+  "is_public": true,
+  "start_at": "2025-10-31 20:00:00",
+  "end_at": "2025-10-31 20:00:00",
+  "share_code": "MLX4UOKI",
+  "mode": "BRACKET",
+  "city": "Paris",
+  "status": "DRAFT",
+  "teams": [
+    {
+      "id": 1,
+      "name": "Team 1",
+      "victories": 1,
+      "defeats": 0,
+      "total_score": 75,
+      "participants": [
+        {
+          "id": 1,
+          "display_name": "Aiden",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 2,
+          "display_name": "Elias",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Team 2",
+      "victories": 0,
+      "defeats": 1,
+      "total_score": 35,
+      "participants": [
+        {
+          "id": 3,
+          "display_name": "Luca",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 4,
+          "display_name": "Iris",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Team 3",
+      "victories": 1,
+      "defeats": 0,
+      "total_score": 55,
+      "participants": [
+        {
+          "id": 5,
+          "display_name": "Jade",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 6,
+          "display_name": "Milo",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Team 4",
+      "victories": 0,
+      "defeats": 1,
+      "total_score": 15,
+      "participants": [
+        {
+          "id": 7,
+          "display_name": "Soren",
+          "joined_at": "2025-10-31 20:00:00"
+        },
+        {
+          "id": 8,
+          "display_name": "Leo",
+          "joined_at": "2025-10-31 20:00:00"
+        }
+      ]
+    }
+  ],
+  "min_matches_per_team": 2
+}
