@@ -23,24 +23,27 @@ function HomePage() {
     document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const basePath = import.meta.env.BASE_URL || "/portfolio-landing-matchmaker/";
+
   const imagesGeneral = [
-    `/data/images/slide_${theme}_ranking.png`,
-    `/data/images/slide_${theme}_matches.png`,
-    `/data/images/slide_${theme}_tree.png`,
+    `${basePath}data/images/slide_${theme}_ranking.png`,
+    `${basePath}data/images/slide_${theme}_matches.png`,
+    `${basePath}data/images/slide_${theme}_tree.png`,
   ];
 
   const imagesTournament = [
-    `/data/images/slide_${theme}_tournament_list.png`,
-    `/data/images/slide_${theme}_tournament_general.png`,
-    `/data/images/slide_${theme}_tournament_participants.png`,
+    `${basePath}data/images/slide_${theme}_tournament_list.png`,
+    `${basePath}data/images/slide_${theme}_tournament_general.png`,
+    `${basePath}data/images/slide_${theme}_tournament_participants.png`,
   ];
 
-  const imageMobile = `/data/images/mobile_${theme}.png`;
+  const imageMobile = `${basePath}data/images/mobile_${theme}.png`;
 
   const teamImages = {
-    baptiste: "/data/images/team_baptiste.jpg",
-    gwendal: "/data/images/team_gwendal.jpg",
+    baptiste: `${basePath}data/images/team_baptiste.jpg`,
+    gwendal: `${basePath}data/images/team_gwendal.jpg`,
   };
+
 
   const updateScores = () => {
     const teams = [...scoreboard.teams];
